@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4BE834FC1D21FDB100E65E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE834FB1D21FDB100E65E3D /* AppDelegate.swift */; };
-		4BE834FE1D21FDB100E65E3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE834FD1D21FDB100E65E3D /* ViewController.swift */; };
 		4BE835011D21FDB100E65E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE834FF1D21FDB100E65E3D /* Main.storyboard */; };
 		4BE835031D21FDB100E65E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE835021D21FDB100E65E3D /* Assets.xcassets */; };
 		4BE835061D21FDB100E65E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE835041D21FDB100E65E3D /* LaunchScreen.storyboard */; };
 		4BE835111D21FDB100E65E3D /* RadioStationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE835101D21FDB100E65E3D /* RadioStationTests.swift */; };
 		4BE8351C1D21FDB200E65E3D /* RadioStationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8351B1D21FDB200E65E3D /* RadioStationUITests.swift */; };
+		4BE8352A1D21FDD400E65E3D /* CreateQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE835291D21FDD300E65E3D /* CreateQueueViewController.swift */; };
+		4BE8352C1D21FDF500E65E3D /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8352B1D21FDF500E65E3D /* MusicPlayerViewController.swift */; };
+		4BE8352E1D21FE0300E65E3D /* StationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8352D1D21FE0300E65E3D /* StationListViewController.swift */; };
+		4BE835301D21FE1100E65E3D /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8352F1D21FE1100E65E3D /* StationViewController.swift */; };
+		F5971BD061A162A9C1323F17 /* Pods_RadioStation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A755BB17D58EFDFC64110E98 /* Pods_RadioStation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45C59B5BFAF48B31899934F9 /* Pods-RadioStation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioStation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RadioStation/Pods-RadioStation.debug.xcconfig"; sourceTree = "<group>"; };
 		4BE834F81D21FDB100E65E3D /* RadioStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE834FB1D21FDB100E65E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4BE834FD1D21FDB100E65E3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4BE835001D21FDB100E65E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BE835021D21FDB100E65E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BE835051D21FDB100E65E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		4BE835171D21FDB200E65E3D /* RadioStationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadioStationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE8351B1D21FDB200E65E3D /* RadioStationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioStationUITests.swift; sourceTree = "<group>"; };
 		4BE8351D1D21FDB200E65E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BE835291D21FDD300E65E3D /* CreateQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQueueViewController.swift; sourceTree = "<group>"; };
+		4BE8352B1D21FDF500E65E3D /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		4BE8352D1D21FE0300E65E3D /* StationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationListViewController.swift; sourceTree = "<group>"; };
+		4BE8352F1D21FE1100E65E3D /* StationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
+		A1A2F6ED5027BDAA867D03D0 /* Pods-RadioStation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioStation.release.xcconfig"; path = "Pods/Target Support Files/Pods-RadioStation/Pods-RadioStation.release.xcconfig"; sourceTree = "<group>"; };
+		A755BB17D58EFDFC64110E98 /* Pods_RadioStation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadioStation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5971BD061A162A9C1323F17 /* Pods_RadioStation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		233BFB41B926C8BDFAB5A5D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45C59B5BFAF48B31899934F9 /* Pods-RadioStation.debug.xcconfig */,
+				A1A2F6ED5027BDAA867D03D0 /* Pods-RadioStation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		259728E085857C9807ECF2D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A755BB17D58EFDFC64110E98 /* Pods_RadioStation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4BE834EF1D21FDB100E65E3D = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				4BE8350F1D21FDB100E65E3D /* RadioStationTests */,
 				4BE8351A1D21FDB200E65E3D /* RadioStationUITests */,
 				4BE834F91D21FDB100E65E3D /* Products */,
+				233BFB41B926C8BDFAB5A5D5 /* Pods */,
+				259728E085857C9807ECF2D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +128,10 @@
 			isa = PBXGroup;
 			children = (
 				4BE834FB1D21FDB100E65E3D /* AppDelegate.swift */,
-				4BE834FD1D21FDB100E65E3D /* ViewController.swift */,
+				4BE835291D21FDD300E65E3D /* CreateQueueViewController.swift */,
+				4BE8352B1D21FDF500E65E3D /* MusicPlayerViewController.swift */,
+				4BE8352D1D21FE0300E65E3D /* StationListViewController.swift */,
+				4BE8352F1D21FE1100E65E3D /* StationViewController.swift */,
 				4BE834FF1D21FDB100E65E3D /* Main.storyboard */,
 				4BE835021D21FDB100E65E3D /* Assets.xcassets */,
 				4BE835041D21FDB100E65E3D /* LaunchScreen.storyboard */,
@@ -132,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BE835201D21FDB200E65E3D /* Build configuration list for PBXNativeTarget "RadioStation" */;
 			buildPhases = (
+				8D07ED87AECCB2CBFA2B065D /* 📦 Check Pods Manifest.lock */,
 				4BE834F41D21FDB100E65E3D /* Sources */,
 				4BE834F51D21FDB100E65E3D /* Frameworks */,
 				4BE834F61D21FDB100E65E3D /* Resources */,
+				039F851AF5F975A5254B25CC /* 📦 Embed Pods Frameworks */,
+				CDC5621DF8953E3D3744451C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +229,7 @@
 				TargetAttributes = {
 					4BE834F71D21FDB100E65E3D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ADZM66J8M5;
 					};
 					4BE8350B1D21FDB100E65E3D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -251,13 +288,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		039F851AF5F975A5254B25CC /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RadioStation/Pods-RadioStation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D07ED87AECCB2CBFA2B065D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CDC5621DF8953E3D3744451C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RadioStation/Pods-RadioStation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4BE834F41D21FDB100E65E3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BE834FE1D21FDB100E65E3D /* ViewController.swift in Sources */,
+				4BE8352A1D21FDD400E65E3D /* CreateQueueViewController.swift in Sources */,
+				4BE8352C1D21FDF500E65E3D /* MusicPlayerViewController.swift in Sources */,
 				4BE834FC1D21FDB100E65E3D /* AppDelegate.swift in Sources */,
+				4BE8352E1D21FE0300E65E3D /* StationListViewController.swift in Sources */,
+				4BE835301D21FE1100E65E3D /* StationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,23 +487,31 @@
 		};
 		4BE835211D21FDB200E65E3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C59B5BFAF48B31899934F9 /* Pods-RadioStation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RadioStation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PubNub.RadioStation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		4BE835221D21FDB200E65E3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1A2F6ED5027BDAA867D03D0 /* Pods-RadioStation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RadioStation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PubNub.RadioStation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +580,7 @@
 				4BE835221D21FDB200E65E3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4BE835231D21FDB200E65E3D /* Build configuration list for PBXNativeTarget "RadioStationTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +589,7 @@
 				4BE835251D21FDB200E65E3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4BE835261D21FDB200E65E3D /* Build configuration list for PBXNativeTarget "RadioStationUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +598,7 @@
 				4BE835281D21FDB200E65E3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

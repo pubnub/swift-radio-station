@@ -7,11 +7,24 @@
 //
 
 import UIKit
+import PubNub
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
     var window: UIWindow?
+    lazy var client: PubNub = {
+        let config = PNConfiguration(publishKey: "pub-c-632aa1ab-06a6-4a37-b6ab-a86d25e5a3e5", subscribeKey: "sub-c-d6d54c3e-3808-11e6-b83b-0619f8945a4f")
+        let pub = PubNub.clientWithConfiguration(config)
+        return pub
+    }()
+    
+    override init() {
+        super.init()
+        client.addListener(self)
+        //Create channel to hold every radio station channel created
+        client.subscribeToChannels(["All_Stations"], withPresence: false)
+    }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
