@@ -40,13 +40,13 @@ class CreateQueueViewController: UIViewController, UITableViewDelegate, UITableV
     
     //Create station name and segue to radio station if playback queue isn't empty
     @IBAction func takeInputAndSegue(sender: AnyObject) {
+        
         let alert = UIAlertController(title: "Name your radio station!", message: nil, preferredStyle: .Alert)
-        
         alert.addTextFieldWithConfigurationHandler(nil)
-        
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             if !self.queue.isEmpty {
                 let radioStationName = alert.textFields![0] as UITextField
+                if !radioStationName.text!.isEmpty && radioStationName.text?.characters.count <= 60 {
                 let stationName = radioStationName.text!
                 //Adds a timestamp to the station name to make it a unique channel name
                 let channelName = self.createValidPNChannel(stationName)
@@ -64,6 +64,11 @@ class CreateQueueViewController: UIViewController, UITableViewDelegate, UITableV
                         self.navigationController?.pushViewController(musicPlayerVC, animated: true)
                     })
                 })
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.showAlert("Try again", error: "Radio station name can't be empty or more than 60 characters")
+                    })
+                }
             } else {
                 dispatch_async(dispatch_get_main_queue(), {
                     self.showAlert("Try again", error: "Playlist cannot be empty")
@@ -137,6 +142,7 @@ class CreateQueueViewController: UIViewController, UITableViewDelegate, UITableV
         return 10
     }
     
+    //Display iTunes search results
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: nil)
         if let rowData: NSDictionary = self.tableData[indexPath.row] as? NSDictionary,
@@ -173,8 +179,9 @@ class CreateQueueViewController: UIViewController, UITableViewDelegate, UITableV
     //Create unique PubNub channel by concatenating the current timestamp to the name of the radio station
     func createValidPNChannel(channelName: String) -> String {
         let regex = try? NSRegularExpression(pattern: "[\\W]", options: .CaseInsensitive)
-        var validChannelName = regex!.stringByReplacingMatchesInString(channelName, options: [], range: NSRange(0..<channelName.utf16.count), withTemplate: "")
+        var validChannelName = regex!.stringByReplacingMatchesInString(channelName, options: [], range: NSRange(0..<channelName.characters.count), withTemplate: "")
         validChannelName += "\(NSDate().timeIntervalSince1970)"
+        validChannelName = validChannelName.stringByReplacingOccurrencesOfString(".", withString: "")
         return validChannelName
     }
     
