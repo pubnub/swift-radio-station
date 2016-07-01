@@ -32,6 +32,7 @@ class MusicPlayerViewController: UIViewController, PNObjectEventListener {
     //Skip to the next track and publish the trackId, currentPlaybackTime, trackName and artistName to the current channel
     @IBAction func skipForwards(sender: AnyObject) {
         controller.skipToNextItem()
+        if controller.indexOfNowPlayingItem < queue.count {
         trackName.text = queue[controller.indexOfNowPlayingItem].trackName
         artistName.text = queue[controller.indexOfNowPlayingItem].artistName
         appDelegate.client.publish(["trackId" : trackIds[controller.indexOfNowPlayingItem], "currentPlaybackTime" : controller.currentPlaybackTime, "trackName" : queue[controller.indexOfNowPlayingItem].trackName!, "artistName" : queue[controller.indexOfNowPlayingItem].artistName!], toChannel: channelName, withCompletion: { (status) in
@@ -45,11 +46,13 @@ class MusicPlayerViewController: UIViewController, PNObjectEventListener {
                 self.showAlert("Error", error: "Network error")
             }
         })
+        }
     }
     
     //Skip to the previous track and publish the trackId, currentPlaybackTime, trackName and artistName to the current channel
     @IBAction func skipBackwards(sender: AnyObject) {
         controller.skipToPreviousItem()
+        if controller.indexOfNowPlayingItem < queue.count {
         trackName.text = queue[controller.indexOfNowPlayingItem].trackName
         artistName.text = queue[controller.indexOfNowPlayingItem].artistName
         appDelegate.client.publish(["trackId" : trackIds[controller.indexOfNowPlayingItem], "currentPlaybackTime" : controller.currentPlaybackTime, "trackName" : queue[controller.indexOfNowPlayingItem].trackName!, "artistName" : queue[controller.indexOfNowPlayingItem].artistName!], toChannel: channelName, withCompletion: { (status) in
@@ -63,6 +66,7 @@ class MusicPlayerViewController: UIViewController, PNObjectEventListener {
                 self.showAlert("Error", error: "Network error")
             }
         })
+        }
     }
     
     override func viewDidLoad() {
