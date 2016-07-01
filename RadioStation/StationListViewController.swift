@@ -55,6 +55,7 @@ class StationListViewController: UIViewController, UITableViewDelegate, UITableV
     //Store the PubNub channelName in the detailTextLabel
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: nil)
+        cell.accessoryType = .DisclosureIndicator
         cell.textLabel?.text = stationNames[stationNames.startIndex.advancedBy(indexPath.row)]
         cell.detailTextLabel?.text = channelNames[channelNames.startIndex.advancedBy(indexPath.row)]
         cell.detailTextLabel?.hidden = true
