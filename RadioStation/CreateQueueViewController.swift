@@ -50,7 +50,7 @@ class CreateQueueViewController: UIViewController, UITableViewDelegate, UITableV
                 let stationName = radioStationName.text!
                 //Adds a timestamp to the station name to make it a unique channel name
                 let channelName = self.createValidPNChannel(stationName)
-                //Publish station to a list of all stations created
+                //Publish station to a channel holding all stations created
                 self.appDelegate.client.publish(["stationName" : stationName, "channelName" : channelName], toChannel: "All_Stations", withCompletion: { (status) in
                     if status.error {
                         self.showAlert("Error", error: "Network error")

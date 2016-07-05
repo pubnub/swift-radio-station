@@ -18,13 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
         let pub = PubNub.clientWithConfiguration(config)
         return pub
     }()
-    
-    override init() {
-        super.init()
-        //Create channel to hold every radio station channel created
-        client.subscribeToChannels(["All_Stations"], withPresence: false)
-    }
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
