@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
     
     override init() {
         super.init()
-        client.addListener(self)
         //Create channel to hold every radio station channel created
         client.subscribeToChannels(["All_Stations"], withPresence: false)
     }
