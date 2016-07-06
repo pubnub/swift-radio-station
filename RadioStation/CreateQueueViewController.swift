@@ -47,23 +47,23 @@ class CreateQueueViewController: UIViewController, UITableViewDelegate, UITableV
             if !self.queue.isEmpty {
                 let radioStationName = alert.textFields![0] as UITextField
                 if !radioStationName.text!.isEmpty && radioStationName.text?.characters.count <= 60 {
-                let stationName = radioStationName.text!
-                //Adds a timestamp to the station name to make it a unique channel name
-                let channelName = self.createValidPNChannel(stationName)
-                //Publish station to a channel holding all stations created
-                self.appDelegate.client.publish(["stationName" : stationName, "channelName" : channelName], toChannel: "All_Stations", withCompletion: { (status) in
-                    if status.error {
-                        self.showAlert("Error", error: "Network error")
-                    }
-                    self.appDelegate.client.subscribeToChannels([channelName], withPresence: true)
-                    dispatch_async(dispatch_get_main_queue(), {
-                        //Segue to the radio station
-                        let musicPlayerVC = self.storyboard?.instantiateViewControllerWithIdentifier("MusicPlayerViewController") as! MusicPlayerViewController
-                        musicPlayerVC.queue = self.queue
-                        musicPlayerVC.channelName = channelName
-                        self.navigationController?.pushViewController(musicPlayerVC, animated: true)
+                    let stationName = radioStationName.text!
+                    //Adds a timestamp to the station name to make it a unique channel name
+                    let channelName = self.createValidPNChannel(stationName)
+                    //Publish station to a channel holding all stations created
+                    self.appDelegate.client.publish(["stationName" : stationName, "channelName" : channelName], toChannel: "All_Stations", withCompletion: { (status) in
+                        if status.error {
+                            self.showAlert("Error", error: "Network error")
+                        }
+                        self.appDelegate.client.subscribeToChannels([channelName], withPresence: true)
+                        dispatch_async(dispatch_get_main_queue(), {
+                            //Segue to the radio station
+                            let musicPlayerVC = self.storyboard?.instantiateViewControllerWithIdentifier("MusicPlayerViewController") as! MusicPlayerViewController
+                            musicPlayerVC.queue = self.queue
+                            musicPlayerVC.channelName = channelName
+                            self.navigationController?.pushViewController(musicPlayerVC, animated: true)
+                        })
                     })
-                })
                 } else {
                     dispatch_async(dispatch_get_main_queue(), {
                         self.showAlert("Try again", error: "Radio station name can't be empty or more than 60 characters")
