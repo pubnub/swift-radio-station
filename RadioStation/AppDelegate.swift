@@ -8,6 +8,7 @@
 
 import UIKit
 import PubNub
+import StoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
@@ -40,12 +41,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        //Ask user for for Apple Music access
+        SKCloudServiceController.requestAuthorization { (status) in
+            if status == .Authorized {
+                let controller = SKCloudServiceController()
+                //Check if user is a Apple Music member
+                controller.requestCapabilitiesWithCompletionHandler({ (capabilities, error) in
+                    if error != nil {
+                        dispatch_async(dispatch_get_main_queue(), {
+                            self.showAlert("Capabilites error", error: "You must be an Apple Music member to use this application")
+                        })
+                    }
+                })
+            } else {
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.showAlert("Denied", error: "User has denied access to Apple Music library")
+                })
+            }
+        }
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    //Dialogue showing error
+    func showAlert(title: String, error: String) {
+        let alertController = UIAlertController(title: title, message: error, preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(OKAction)
+        window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
+    }
 
 }
 

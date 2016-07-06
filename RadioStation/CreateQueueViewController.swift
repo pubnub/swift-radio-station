@@ -85,15 +85,6 @@ class CreateQueueViewController: UIViewController, UITableViewDelegate, UITableV
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
-        let controller = SKCloudServiceController()
-        //Check if user is a Apple Music member
-        controller.requestCapabilitiesWithCompletionHandler({ (capabilities, error) in
-            if error != nil {
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.showAlert("Capabilites error", error: "You must be an Apple Music member to use this application")
-                })
-            }
-        })
     }
     
     override func viewDidAppear(animated: Bool) {
