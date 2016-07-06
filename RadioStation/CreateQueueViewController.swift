@@ -31,8 +31,10 @@ struct SongData {
 
 class CreateQueueViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, PNObjectEventListener {
     
+    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    var leftBarButtonItem : UIBarButtonItem!
     var tableData = []
     var queue: [SongData] = []
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -85,10 +87,23 @@ class CreateQueueViewController: UIViewController, UITableViewDelegate, UITableV
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        
+        searchBar.placeholder = "Start typing to add tracks to playlist"
     }
     
     override func viewDidAppear(animated: Bool) {
         queue = []
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillAppear), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillDisappear), name: UIKeyboardWillHideNotification, object: nil)
+        leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(dismissSearchKeyboard))
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -103,6 +118,18 @@ class CreateQueueViewController: UIViewController, UITableViewDelegate, UITableV
             searchItunes(search)
             searchBar.resignFirstResponder()
         }
+    }
+    
+    func dismissSearchKeyboard() {
+        self.view.endEditing(true)
+    }
+    
+    func keyboardWillAppear(notification: NSNotification){
+        self.navigationItem.leftBarButtonItem = self.leftBarButtonItem
+    }
+    
+    func keyboardWillDisappear(notification: NSNotification){
+        self.navigationItem.leftBarButtonItem = nil
     }
     
     //Search iTunes and display results in table view

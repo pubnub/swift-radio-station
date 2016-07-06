@@ -230,6 +230,11 @@
 					4BE834F71D21FDB100E65E3D = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = ADZM66J8M5;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					4BE8350B1D21FDB100E65E3D = {
 						CreatedOnToolsVersion = 7.3.1;

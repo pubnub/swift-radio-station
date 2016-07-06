@@ -158,7 +158,7 @@
                                 <rect key="frame" x="0.0" y="445" width="320" height="74"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="W7C-Yj-241"/>
+                                    <constraint firstAttribute="height" constant="74" id="VOX-YW-cGy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Go DJ playlist">
@@ -179,16 +179,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1xX-bN-P9T" firstAttribute="leading" secondItem="vWk-rJ-g7k" secondAttribute="leading" id="05A-GK-xqe"/>
-                            <constraint firstItem="vWk-rJ-g7k" firstAttribute="bottom" secondItem="RQ0-MK-aAy" secondAttribute="top" id="8ak-gh-kVA"/>
-                            <constraint firstItem="yl9-Ys-Iau" firstAttribute="trailing" secondItem="1xX-bN-P9T" secondAttribute="trailing" id="KEy-mt-EcJ"/>
-                            <constraint firstItem="yl9-Ys-Iau" firstAttribute="leading" secondItem="6mm-H3-GFf" secondAttribute="leading" id="UR9-zb-x5a"/>
-                            <constraint firstItem="vWk-rJ-g7k" firstAttribute="top" secondItem="1xX-bN-P9T" secondAttribute="bottom" constant="1" id="Yue-Mj-e2B"/>
-                            <constraint firstAttribute="trailing" secondItem="yl9-Ys-Iau" secondAttribute="trailing" id="f96-PJ-MbK"/>
-                            <constraint firstItem="yl9-Ys-Iau" firstAttribute="top" secondItem="oKv-7L-Fis" secondAttribute="bottom" id="fb8-rY-WIA"/>
-                            <constraint firstItem="1xX-bN-P9T" firstAttribute="trailing" secondItem="vWk-rJ-g7k" secondAttribute="trailing" id="j9e-4M-fr8"/>
-                            <constraint firstItem="yl9-Ys-Iau" firstAttribute="leading" secondItem="1xX-bN-P9T" secondAttribute="leading" id="qKc-9S-KjP"/>
-                            <constraint firstItem="1xX-bN-P9T" firstAttribute="top" secondItem="yl9-Ys-Iau" secondAttribute="bottom" id="sTK-Ed-akT"/>
+                            <constraint firstItem="1xX-bN-P9T" firstAttribute="leading" secondItem="vWk-rJ-g7k" secondAttribute="leading" id="2SN-X3-XaL"/>
+                            <constraint firstItem="yl9-Ys-Iau" firstAttribute="leading" secondItem="6mm-H3-GFf" secondAttribute="leading" id="2VI-MR-1Xn"/>
+                            <constraint firstItem="vWk-rJ-g7k" firstAttribute="bottom" secondItem="RQ0-MK-aAy" secondAttribute="top" id="5N1-Or-4qc"/>
+                            <constraint firstItem="1xX-bN-P9T" firstAttribute="trailing" secondItem="vWk-rJ-g7k" secondAttribute="trailing" id="A1M-7C-0Xr"/>
+                            <constraint firstItem="yl9-Ys-Iau" firstAttribute="leading" secondItem="1xX-bN-P9T" secondAttribute="leading" id="HhG-ab-rqu"/>
+                            <constraint firstItem="yl9-Ys-Iau" firstAttribute="trailing" secondItem="1xX-bN-P9T" secondAttribute="trailing" id="NbD-RC-uW4"/>
+                            <constraint firstAttribute="trailing" secondItem="yl9-Ys-Iau" secondAttribute="trailing" id="SJG-n9-cGV"/>
+                            <constraint firstItem="yl9-Ys-Iau" firstAttribute="top" secondItem="oKv-7L-Fis" secondAttribute="bottom" id="YFK-ee-Qq8"/>
+                            <constraint firstItem="1xX-bN-P9T" firstAttribute="top" secondItem="yl9-Ys-Iau" secondAttribute="bottom" id="ask-c6-y2Q"/>
+                            <constraint firstItem="vWk-rJ-g7k" firstAttribute="top" secondItem="1xX-bN-P9T" secondAttribute="bottom" constant="1" id="yIp-Ck-rR1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create playlist" id="tgp-Mc-q3T"/>
