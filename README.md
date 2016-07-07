@@ -4,10 +4,10 @@ This application allows a user to DJ a radio station or listen to one that has b
 
 Searching for tracks to add to a playlist is handled through the iTunes Search API. Those tracks are played using the Apple Music API. This app has been written for the following tutorial, https://www.pubnub.com/blog/2016-07-07-realtime-radio-station-application-using-apple-music-and-itunes-search-apis/.
 
-#DJ a Radio station
+##DJ a Radio station
 ![DJ a radio station demo] (https://i.imgsafe.org/e9cd8be358.gif)
 
-##Search iTunes and display results
+###Search iTunes and display results
 Once it’s confirmed that the user is a Apple Music member, the searchItunes() function will use the iTunes Search API to make a GET request for whatever input the user provided from the searchBarSearchButtonClicked() function:
 
 <code>//Search iTunes and display results in table view
