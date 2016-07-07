@@ -208,9 +208,9 @@ end
 ##Credits
 
 ###App Icons
-dj.png - Created by Sergey Demushkin from Noun Project
-fast_forward.png - Created by Alex Audo Samora from Noun Project
-listen.png - Created by artwork bean from the Noun Project
-rewind.png - Created by Alex Audo Samora from Noun Project
-thumbs_down.png - Created by useiconic.com from Noun Project
-thumbs_up.png - Created by useiconic.com from Noun Project
+"dj.png" - Created by Sergey Demushkin from Noun Project
+"fast_forward.png" - Created by Alex Audo Samora from Noun Project
+"listen.png" - Created by artwork bean from the Noun Project
+"rewind.png" - Created by Alex Audo Samora from Noun Project
+"thumbs_down.png" - Created by useiconic.com from Noun Project
+"thumbs_up.png" - Created by useiconic.com from Noun Project
