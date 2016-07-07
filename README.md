@@ -10,7 +10,7 @@ Searching for tracks to add to a playlist is handled through the iTunes Search A
 ###Search iTunes and display results
 Once it’s confirmed that the user is a Apple Music member, the searchItunes() function will use the iTunes Search API to make a GET request for whatever input the user provided from the searchBarSearchButtonClicked() function:
 
-```
+```swift
 //Search iTunes and display results in table view
 func searchItunes(searchTerm: String) {
     Alamofire.request(.GET, "https://itunes.apple.com/search?term=\(searchTerm)&entity=song")
@@ -40,7 +40,7 @@ func searchBarSearchButtonClicked(searchBar: UISearchBar) {
 ``` 
 
 Once we get this data, it will be displayed in a table view allowing the user to pick a track and add it to their playback queue:
-```
+```swift
 //Display iTunes search results
 func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: nil)
