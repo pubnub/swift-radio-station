@@ -6,5 +6,3 @@ Searching for tracks to add to a playlist is handled through the iTunes Search A
 
 # DJ a radio station
 
-![Display data and select tracks](https://www.pubnub.com/wp-content/uploads/2016/07/display-itunes-data-and-select-tracks.gif)
-![Select tracks and name radio station](https://www.pubnub.com/wp-content/uploads/2016/07/select-tracks-and-name-radio-station.gif)
